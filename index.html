@@ -1,79 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+<head>
+	<title>Web Development Project 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body bgcolor="yellowgreen">
+<h1>Web Development Project 1</h1>
+<form>
+	<div id="main_adr" style="float:left;">
+		<h2>Address Book</h2>
+		<p>The results of the code done in the address book exercise are as follows:</p>
+		<p>To list the names in the contact list, click the button below:</p>
+		<p><button onClick="list();">Click Me</button> </p>
+		<p>You are able to search for persons based on the following last names:</p>
+<button onClick="search('Cooper');">Cooper </button><button onClick="search('Johnson');">Johnson </button><button onClick="search('Jones');">Jones </button>
+		<p>In the event that you wanted to add a contact fill out the follwing information:</p>
+		<p>First Name:<input type="text" id="firstName" name="firstName"></p>
+		<p>Last Name:<input type="text" id="lastName" name="lastName"></p>
+		<p>Email:<input type="text" id="email" name="email"></p>
+		<p>Phone Number:<input type="text" id="phoneNumber" name="phoneNumber"></p>
+		<p> The click the button bellow, you can then try the list function again to see if it was added.</p>
+		<script type="text/javascript"> 
+			/*var getVals=[""+firstName,""+lastName,""+email,""+phoneNumber];*/
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Info2180project1 : ">
+			function runfunc(){
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Info2180project1</title>
-  </head>
+			var f=document.getElementById("firstName").value;
+			var l=document.getElementById("lastName").value;
+			var e=document.getElementById("email").value;
+			var p=document.getElementById("phoneNumber").value;
 
-  <body>
+			add(''+f,''+l,''+e,''+p);
+		}
+		</script>
+	
+		<p> <button  onClick="runfunc();list();">Add</button></p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/rhinocoopes21/info2180project1">View on GitHub</a>
 
-          <h1 id="project_title">Info2180project1</h1>
-          <h2 id="project_tagline"></h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/rhinocoopes21/info2180project1/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/rhinocoopes21/info2180project1/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+	</div>
+	<div id="cash_reg" style="float:right;">
+		<h2>Cash Register Results</h2>
+		<p>The result of the code done in the cash register exercise is as follows. </p>
+		<p>At a calculation of item * quantity based on the instructions given :
+			<ul>
+				<li>Eggs, 0.98 * quantity </li>
+				<li>Milk, 1.23 * quantity </li>
+				<li>Magazine, 4.99 * quantity </li>
+				<li>Chocolate, 0.45 * quantity </li>
+			</ul>
+		</p>
+		<p>The various quantities are as followed:
+			<ul>
+				<li>Eggs, 300000 units</li>
+				<li>Milk, 10 units</li>
+				<li>Magazine, 1234 units</li>
+				<li>Chocolate, 3 units</li>
+			</ul>
+		</p>
+		<p><button onClick="alert( 'Your bill is $'+cashRegister.total);"> Result</button> <!--<script type="text/javascript"> document.write( 'Your bill is $'+cashRegister.total);</script>-->
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+	</div>	
+</form>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<div style="clear:both;"></div>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Info2180project1 maintained by <a href="https://github.com/rhinocoopes21">rhinocoopes21</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+<footer>
+	Id Number: 620044726 | Name: Stefan Cooper
+</footer>
+</body>
 </html>
